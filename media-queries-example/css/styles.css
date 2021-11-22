@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+}
+
+.wrapper {
+    background-color: #FAF5EB;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #692D55;
+}
+
+.subtitle {
+    display: none;
+}
+
+/** Reglerna inom media query appliceras bara om skärmen är mindre än
+600px i bredd
+*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        background-color: #000000;
+    }
+
+    .title {
+        color: #dcdcdc;
+        text-shadow: 0 0 10px #6A82FB,
+                     1px 1px 20px #6A82FB,
+                     5px 5px 40px #6A82FB,
+                     0px 0px 100px #000;
+    }
+}
+
+/** Om skärmstorleken är mellan 600px och 800px bred så
+appliceras nedan CSS */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .subtitle {
+        display: block;
+    }
+}
