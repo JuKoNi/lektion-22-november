@@ -151,6 +151,7 @@ p {
     padding: 2rem 2rem 0rem 2rem;
     margin-bottom: -8rem;
     background-color: #FAB131;
+    flex-wrap: wrap;
 }
 
 .cards__card {
@@ -163,6 +164,7 @@ p {
     padding: 1rem;
     margin: 0.5rem;
     transform: translateY(-200px);
+    max-width: 275px;
 }
 
 .cards__card .cards__children, .cards__just-right, .cards__old-fart {
@@ -285,4 +287,30 @@ p {
     grid-area: footer;
     height: 20rem;
     background-color: #777574;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "welcome"
+        "learn"
+        "join"
+        "navigation"
+        "info"
+        "cards"
+        "about"
+        "how"
+        "up"
+        "footer";
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info__join {
+        
+    }
 }
